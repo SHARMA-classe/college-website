@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    
+    .header{
+
+min-height: 100vh;
+width: 100%;
+background-image: url(Eduford_images/banner.png);
+background-size: cover;
+position: relative;
+
+
+
+    }
+   nav{
+display: flex;
+
+ justify-content: space-between;  
+ align-items: center;     
+    }
+
+    nav img{
+width: 200px;
+
+
+
+
+    }
+    
+    .nav-links{
+        flex: 0.5;
+        text-align: right
+    }
+    .nav-links ul li{
+        list-style: none;
+display: inline-block;
+padding: 15px 12px;
+padding-top: 50px;
+position: relative;
+
+
+    }
+    .nav-links ul li a{
+
+color:wheat;
+text-decoration: none;
+font-size: 18px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    }
+    .nav-links ul li a::after{
+content: '';
+width: 0;
+height: 2px;
+background: white;
+display: block;
+margin: auto;
+transition: 0.5s;
+    }
+ .nav-links ul li a:hover::after{
+width: 100%;
+
+    }
+
+.text-box{
+width: 90%;
+color: black;
+position:absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50%,-50%);
+text-align: center;
+}
+.text-box h1{
+font-size: 40px;
+}
+.text-box p{
+
+font-size: 20px;
+}
+.hero-btn{
+
+display: inline-block;
+text-decoration: none;
+color: black;
+border: 1px solid red;
+padding: 12px 34px;
+font-size: 13px;
+background:wheat;
+position: relative;
+cursor: pointer;
+}
+.hero-btn:hover{
+    border: 2px solid black;
+background-color: white;
+transition: 1s;
+
+}
+.course{
+width: 80%;
+margin: auto;
+text-align: center;
+padding-top: 10px;
+}
+
+.course p{
+
+  font-size: 15px;  
+  color:black
+}
+
+.row{
+  
+margin-top:3%;
+margin-left: 10%;
+width: 100%;
+display: flex;
+justify-content: space-between;
+margin-left: 2%;
+
+
+}.course-col{
+
+flex-basis: 31%;
+background: #fff3f3;
+
+border-radius: 10px;
+margin-bottom: 5%;
+padding:20px 12px;
+box-sizing: border-box;
+}
+h3{
+text-align: center;
+font-weight: 600;
+margin :10px 0;
+
+
+}
+
+.course-col:hover{
+
+box-shadow: 1px 1px  10px crimson;
+
+
+
+
+
+}
+
+
+.campus{
+width: 80%;
+margin: auto;
+text-align: center;
+padding-top: 50px;
+
+}
+.campus-col{
+
+
+    flex-basis:82%;
+    border-radius: 10%;
+    margin-bottom: 30px;
+ margin-right: 400px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 4%
+}
+.campus-col img{
+height:100%;
+width:100%;
+display: block;
+}
+
+
+.layer{
+background:transparent;
+height: 100%;
+width:100%;
+position: absolute;
+top:0;
+left: 0;
+}
+
+
+.layer:hover{
+    background:rgba(226,0,0,0.7);
+
+
+
+}
+.layer h3{
+
+    width: 100px;
+font-weight: 500;
+color: #fff;
+font-size: 26px;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+position: absolute;
+opacity: 0;
+transition: 0.5s;
+}
+
+.layer:hover h3{
+
+bottom: 49%;
+opacity: 1;
+
+}
+.facilities{
+
+
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+  .facilities-col{
+
+flex-basis: 31%;
+border-radius: 10px;
+margin-bottom: 5px;
+text-align: left;
+
+
+  }
+.facilities-col img{
+width:80%;
+
+border-radius: 10px;
+
+}
+.facilities-col p{
+
+padding: 0;
+color: black;
+
+}
+.facilities-col h3{
+margin-top: 16px;
+margin-bottom: 15px;
+text-align: left;
+
+}
+.testimonials{
+width: 80%;
+margin: auto;
+text-align: center;
+padding-top: 50px;
+
+}
+.testimonials-col{
+
+flex-basis:44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+
+
+
+
+.testimonials-col img{
+
+height: 40px;
+margin-left: 5px;
+margin-right: 30px;
+margin-top: 20px;
+border-radius: 50%;
+
+justify-content: space-between;
+
+
+}
+.testimonials-col p{
+
+
+    padding: 0;
+}
+.testimonials-col h3{
+
+margin-top: 15px;
+text-align:left;
+
+}
+.hi img{
+margin-left: 10px;
+   width:50%;
+   height:105px;
+   size:50px;
+}
+.cta{
+margin: 100px auto;
+width: 80%;
+margin: auto;
+text-align: center;
+background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(Eduford_images/banner2.jpg);
+background-position: center;
+background-size: cover;
+border-radius: 10px;
+text-align: center;
+padding: 100px;
+
+}
+.cta h1{
+color:white;
+padding-bottom: 40px;
+padding: 0;
+
+
+
+}
+.footer{
+
+
+    width: 80%;
+    margin: auto;
+    text-align:center;
+    padding: 34px 0;
+}
+.footer h4{
+margin-top: 10px;
+margin-bottom: 25px;
+
+
+}
+.icons img{
+    height:40px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+
+
+
+/*---------------abouts us page*/
+.sub-header{
+height:50vh;
+width:100%;
+background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Eduford_images/background.jpg);
+background-position: center;
+background-size: cover;
+text-align: center;
+color: #fff;
+
+}
+
+.sub-header h1{
+
+margin-top:100px ;
+
+}
+.about-us{
+width:80% ;
+margin:auto;
+padding-top: 80px;
+padding-bottom: 50px;
+
+
+}
+
+.about-col{
+flex-basis:48%;
+padding:30px 2px;
+
+}
+.about-col img{
+width:100%;
+
+
+
+
+}
+
+.about-col h1{
+padding-top: 0;
+
+}
+.about-col p{
+
+padding: 15px 0 25px;
+
+}
+
+.red-btn{
+border: 4px solid #a5f436;
+background: blue;
+color: aqua;
+
+
+}
+
+.red-btn:hover{
+color: black;
+
+
+
+
+}
+
+.location{
+
+width: 80%;
+margin: auto;
+padding: 80px 0;
+
+}
+.location iframe{
+
+    width: 100%;
+}
+
+.contact-us{
+width:80%;
+margin:auto;
+}
+.contact-col{
+flex-basis: 50%;
+margin-bottom: 30px;
+
+}
+.contact-col div{
+display: flex;
+align-items: center;
+margin-bottom: 40px;
+}
+.contact-col div p{
+
+    padding:0;
+
+}
+
+.contact-col div h5 {
+font-size: 20px;
+margin-bottom: 5px;
+color:#a5f436;
+font-weight:400;
+}
+
+.contact-col input,.contact-col textarea{
+
+    width:100%;
+    padding:15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid rgb(117, 38, 38);
+    box-sizing: border-box;
+
+}
+
+
+
+   </style>
+   
+   
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+  <section class="sub-header"> 
+<nav>
+<a href="WEEBD.html"><img src="Eduford_images/logo.png" alt=""></a>
+<div class="nav-links">
+
+    <ul>
+
+<li><a href="index.html">HOME</a></li>
+<li><a href="about.html">ABOUT</a></li>
+<li><a href="course.html">COURSE</a></li>
+<li><a href="blog.html">BLOG</a></li>
+<li><a href="contact.html">CONTACT US</a></li>
+
+    </ul>
+</div>
+
+
+
+
+
+
+</nav>
+
+<h1>Contact Us</h1>
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+  </section>
+<section class="location">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.1280820809034!2d86.43658738045406!3d23.814044073518286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6bc9f028f348f%3A0x77f1b26a86425925!2sIIT%20(ISM%2C%20Sardar%20Patel%20Nagar%2C%20Dhanbad%2C%20Jharkhand%20826004!5e0!3m2!1sen!2sin!4v1689873015519!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" frameborder="0"></iframe>
+
+</section>
+  
+<section class=""contact-us>
+<div class="row">
+
+<div class="contact-col">
+<div>
+<i class="fa fa-home"></i>
+
+<span>
+<h5>XYZ Road,ABCbuilding</h5>
+<p>Banglore,karnataka,IN</p>
+
+
+
+
+</span>
+
+</div>
+
+
+<div>
+    <i class="fa fa-phone"></i>
+    
+    <span>
+    <h5>+91 8302597095</h5>
+    <p>Monday to saturday,10AM to 9PM</p>
+    
+    
+    
+    
+    </span>
+    
+    </div>
+
+    <div>
+        <i class="fa fa-envelope-o"></i>
+        
+        <span>
+        <h5>info@easytutuorial.com</h5>
+        <p>Email us your query</p>
+        
+        
+        
+        
+        </span>
+        
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+</div>
+<div class="contact-col">
+    <form action="">
+        <input type="text" placeholder="Enter your name"required>
+        <input type="email"placeholder="Enter email address"required>
+        <input type="text"placeholder="Enter your subject"required>
+        <textarea rows="8" placeholder="Message"required></textarea>
+        <button type="submit"class="hero-btn red-btn">Send Message</button>
+        
+        </form>
+
+
+
+
+
+</div>  
+    
+
+
+
+
+</div>
+
+
+
+
+
+
+</section>
+  
+  
+
+
+
+<section class="footer">
+<h4>ABOUT US</h4>
+<P>Our university has centre all over Asia with area more than 1000+acres .Our University is the largest university of Asia.Its running since 1980s.<br>
+Our University has given gems in every field  </P>
+<div class="icons">
+<img src="https://cdn-icons.flaticon.com/png/512/2504/premium/2504903.png?token=exp=1657121574~hmac=f9ddcf057ebe3a38b4b4914866ff5d46" alt="">
+<img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="">
+<img src="https://cdn-icons-png.flaticon.com/512/25/25347.png" alt="">
+<img src="https://cdn-icons.flaticon.com/png/512/3536/premium/3536505.png?token=exp=1657121817~hmac=1c1ddf5b3736323796496cef0ba47937" alt="" srcset="">
+
+</div>
+</section>
+
+  
+</body>
+</html>
+
+

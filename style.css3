@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    
+    .header{
+
+min-height: 100vh;
+width: 100%;
+background-image: url(Eduford_images/banner.png);
+background-size: cover;
+position: relative;
+
+
+
+    }
+   nav{
+display: flex;
+
+ justify-content: space-between;  
+ align-items: center;     
+    }
+
+    nav img{
+width: 200px;
+
+
+
+
+    }
+    
+    .nav-links{
+        flex: 0.5;
+        text-align: right
+    }
+    .nav-links ul li{
+        list-style: none;
+display: inline-block;
+padding: 15px 12px;
+padding-top: 50px;
+position: relative;
+
+
+    }
+    .nav-links ul li a{
+
+color: black;
+text-decoration: none;
+font-size: 18px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    }
+    .nav-links ul li a::after{
+content: '';
+width: 0;
+height: 2px;
+background: white;
+display: block;
+margin: auto;
+transition: 0.5s;
+    }
+ .nav-links ul li a:hover::after{
+width: 100%;
+
+    }
+
+.text-box{
+width: 90%;
+color: black;
+position:absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50%,-50%);
+text-align: center;
+}
+.text-box h1{
+font-size: 40px;
+}
+.text-box p{
+
+font-size: 20px;
+}
+.hero-btn{
+
+display: inline-block;
+text-decoration: none;
+color: black;
+border: 1px solid red;
+padding: 12px 34px;
+font-size: 13px;
+background:wheat;
+position: relative;
+cursor: pointer;
+}
+.hero-btn:hover{
+    border: 2px solid black;
+background-color: white;
+transition: 1s;
+
+}
+.course{
+width: 80%;
+margin: auto;
+text-align: center;
+padding-top: 10px;
+}
+
+.course p{
+
+  font-size: 15px;  
+  color:black
+}
+
+.row{
+  
+margin-top:3%;
+margin-left: 10%;
+width: 100%;
+display: flex;
+justify-content: space-between;
+margin-left: 2%;
+
+
+}.course-col{
+
+flex-basis: 31%;
+background: #fff3f3;
+
+border-radius: 10px;
+margin-bottom: 5%;
+padding:20px 12px;
+box-sizing: border-box;
+}
+h3{
+text-align: center;
+font-weight: 600;
+margin :10px 0;
+
+
+}
+
+.course-col:hover{
+
+box-shadow: 1px 1px  10px crimson;
+
+
+
+
+
+}
+
+
+.campus{
+width: 80%;
+margin: auto;
+text-align: center;
+padding-top: 50px;
+
+}
+.campus-col{
+
+
+    flex-basis:82%;
+    border-radius: 10%;
+    margin-bottom: 30px;
+ margin-right: 400px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 4%
+}
+.campus-col img{
+height:100%;
+width:100%;
+display: block;
+}
+
+
+.layer{
+background:transparent;
+height: 100%;
+width:100%;
+position: absolute;
+top:0;
+left: 0;
+}
+
+
+.layer:hover{
+    background:rgba(226,0,0,0.7);
+
+
+
+}
+.layer h3{
+
+    width: 100px;
+font-weight: 500;
+color: #fff;
+font-size: 26px;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+position: absolute;
+opacity: 0;
+transition: 0.5s;
+}
+
+.layer:hover h3{
+
+bottom: 49%;
+opacity: 1;
+
+}
+.facilities{
+
+
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+  .facilities-col{
+
+flex-basis: 31%;
+border-radius: 10px;
+margin-bottom: 5px;
+text-align: left;
+
+
+  }
+.facilities-col img{
+width:80%;
+
+border-radius: 10px;
+
+}
+.facilities-col p{
+
+padding: 0;
+color: black;
+
+}
+.facilities-col h3{
+margin-top: 16px;
+margin-bottom: 15px;
+text-align: left;
+
+}
+.testimonials{
+width: 80%;
+margin: auto;
+text-align: center;
+padding-top: 50px;
+
+}
+.testimonials-col{
+
+flex-basis:44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+
+
+
+
+.testimonials-col img{
+
+height: 40px;
+margin-left: 5px;
+margin-right: 30px;
+margin-top: 20px;
+border-radius: 50%;
+
+justify-content: space-between;
+
+
+}
+.testimonials-col p{
+
+
+    padding: 0;
+}
+.testimonials-col h3{
+
+margin-top: 15px;
+text-align:left;
+
+}
+.hi img{
+margin-left: 10px;
+   width:50%;
+   height:105px;
+   size:50px;
+}
+.cta{
+margin: 100px auto;
+width: 80%;
+margin: auto;
+text-align: center;
+background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(Eduford_images/banner2.jpg);
+background-position: center;
+background-size: cover;
+border-radius: 10px;
+text-align: center;
+padding: 100px;
+
+}
+.cta h1{
+color:white;
+padding-bottom: 40px;
+padding: 0;
+
+
+
+}
+.footer{
+
+
+    width: 80%;
+    margin: auto;
+    text-align:center;
+    padding: 34px 0;
+}
+.footer h4{
+margin-top: 10px;
+margin-bottom: 25px;
+
+
+}
+.icons img{
+    height:30px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+   </style>
+   
+   
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+  <section class="header"> 
+<nav>
+<a href="WEEBD.html"><img src="Eduford_images/logo.png" alt=""></a>
+<div class="nav-links">
+
+    <ul>
+
+<li><a href="WEEBD.html">HOME</a></li>
+<li><a href="WEEBD.html">ABOUT</a></li>
+<li><a href="WEEBD.html">COURSE</a></li>
+<li><a href="WEEBD.html">BLOG</a></li>
+<li><a href="WEEBD.html">CONTACT US</a></li>
+
+    </ul>
+</div>
+
+
+
+
+
+
+</nav>
+<div class="text-box">
+<h1>Asia's Largest University</h1>
+<p>
+    Hi everyone ,Welcome to Asias's largest University.We rank first in whole Asia when it comes to quality of education.
+    <br> 
+    If you want to achieve your goals and live your dream life,then start your first step with us
+    
+    </p>
+<a href="" class="hero-btn">Visit  Us  to  know  more</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+  </section>
+
+
+  <section class="course">
+<h1>COURSES WE OFFER</h1>
+<p>Here are some of the courses offer by the institution.You can explore in any field  through these courses</p>
+
+<div class="row">
+<div class="course-col">
+    <div class="hi"></div>
+<h3>INTERMEDIATE</h3>
+<p>For freshers we have introduced this course from which you can learn some of the top skills in short time</p></div>
+
+<div class="course-col">
+    <h3>DEGREE</h3>
+    <p>To have a mastery in a particular field,join our four/five year degree program and take the verified certificate from the institution</p></div>
+
+
+
+
+    <div class="course-col">
+        <h3>POST GRADUATE</h3>
+        <p>This program is only for post graduates.Stand apart from the crowd through this course by learning some of the  skill that will give you an upper hand in jobs</p></div>
+
+</div>
+
+  </section>
+
+
+  <section class="campus">
+<h1>OUR CAMPUS</h1>
+<p1>Have a look at our beautiful campus for you</p1>
+<div class="row">
+<div class="campus-col">
+    <img src="https://qph.cf2.quoracdn.net/main-qimg-cebac93a3549e2f4a0e525a330891850-lq" alt="">
+<div class="layer">
+
+
+    <h3>LONDON</h3>
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+<div class="campus-col">
+    <img src="https://images.unsplash.com/photo-1622604647545-0cada2f34470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHw%3D&w=1000&q=80" alt="">
+<div class="layer">
+
+
+    <h3>LONDON</h3>
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+  </section>
+  <section class="facilities">
+<h1>OUR FACILITIES</h1>
+<P>Some great facilities  provided by the institution</P>
+<div class="row">
+
+<div class="facilities-col">
+<img src="Eduford_images/library.png" alt="">
+<h3>WORLD CLASS LIBRARY</h3>
+<P>Our library is Asia's Second largest library where you find all genres of books with best environment of studying in it</P>
+
+
+
+</div>
+
+
+<div class="facilities-col">
+    <img src="Eduford_images/basketball.png" alt="">
+    <h3>LARGEST PLAYGROUND</h3>
+    <P>Our library is Asia's Second largest library where you find all genres of books with best environment of studying in it</P>
+    
+    
+    
+    </div>
+
+
+
+
+    <div class="facilities-col">
+        <img src="Eduford_images/cafeteria.png" alt="">
+        <h3>BEST PLACE FOR CHILLING</h3>
+        <P>Our library is Asia's Second largest library where you find all genres of books with best environment of studying in it</P>
+        
+        
+        
+        </div>
+
+
+
+
+
+</div>
+
+  </section>
+<section class="testimonials">
+
+
+    <h1>What Our Student Says</h1>
+    <p>Here are some of the feedbacks given by the students</p>
+
+
+
+
+    <div class="row">
+
+        <div class="testimonials-col">
+<img src="Eduford_images/user1.jpg" alt="">
+<div><p>My best decision of my life is taking admission in this University. The institution provides a healthy environment for not only studies but for games and events.
+    Proud to be part of this.
+</p>
+<h3>Isha Saxena</h3>
+<img src="https://cdn-icons-png.flaticon.com/512/991/991999.png" alt="">
+
+</div>
+ </div>
+
+
+ <div class="testimonials-col">
+    <img src="Eduford_images/user2.jpg" alt="">
+    <div><p>My best decision of my life is taking admission in this University. The institution provides a healthy environment for not only studies but for games and events.
+        Proud to be part of this.
+    </p>
+    <h3>Rohit Sharma</h3>
+   <img src="https://cdn-icons-png.flaticon.com/512/992/992001.png" alt="">
+    
+
+    
+    </div>
+     </div>
+
+
+
+
+
+
+
+ </div>
+</section>
+
+<section class="cta">
+
+    <h1>Enroll for our various online  courses  from anywhere in the world</h1>
+    <a href="#" class="hero-btn">CONTACT US</a>
+</section>
+
+<section class="footer">
+<h4>ABOUT US</h4>
+<P>Our university has centre all over Asia with area more than 1000+acres .Our University is the largest university of Asia.Its running since 1980s.<br>
+Our University has given gems in every field  </P>
+<div class="icons">
+<img src="https://cdn-icons.flaticon.com/png/512/2504/premium/2504903.png?token=exp=1657121574~hmac=f9ddcf057ebe3a38b4b4914866ff5d46" alt="">
+<img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="">
+<img src="https://cdn-icons-png.flaticon.com/512/25/25347.png" alt="">
+<img src="https://cdn-icons.flaticon.com/png/512/3536/premium/3536505.png?token=exp=1657121817~hmac=1c1ddf5b3736323796496cef0ba47937" alt="" srcset="">
+
+</div>
+</section>
+
+  
+</body>
+</html>
